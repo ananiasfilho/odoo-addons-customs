@@ -1,0 +1,14 @@
+<!-- Copyright (C) 2024 KMEE
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="view_helpdesk_ticket_team_system_availability" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.team.system_availability.form</field>
+        <field name="model">helpdesk.ticket.team</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.view_helpdesk_team_form" />
+        <field name="arch" type="xml">
+            <field name="show_in_portal" position="after">
+                <field name="system_availability_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+</odoo>

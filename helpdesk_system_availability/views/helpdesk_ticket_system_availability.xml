@@ -1,0 +1,37 @@
+<!-- Copyright (C) 2024 KMEE
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record model="ir.ui.view" id="helpdesk_ticket_system_availability_form">
+        <field name="name">helpdesk.ticket.system_availability.form</field>
+        <field name="model">helpdesk.ticket.system_availability</field>
+        <field name="arch" type="xml">
+            <form string="system_availability">
+                <group>
+                    <field name="name" />
+                    <field name="team_ids" />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="helpdesk_ticket_system_availability_tree">
+        <field name="name">helpdesk.ticket.system_availability.tree</field>
+        <field name="model">helpdesk.ticket.system_availability</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_helpdesk_ticket_system_availability" model="ir.actions.act_window">
+        <field name="name">Helpdesk Ticket system_availability</field>
+        <field name="res_model">helpdesk.ticket.system_availability</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Ticket System Availability"
+        id="helpdesk_ticket_system_availability"
+        parent="helpdesk_mgmt.helpdesk_ticket_config_main_menu"
+        action="action_helpdesk_ticket_system_availability"
+        sequence="5"
+    />
+</odoo>
