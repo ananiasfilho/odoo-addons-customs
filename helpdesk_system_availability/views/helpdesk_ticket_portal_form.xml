@@ -1,0 +1,27 @@
+<odoo>
+    <template
+        id="helpdesk_portal_system_availability"
+        inherit_id="helpdesk_mgmt.portal_create_ticket"
+        priority="40"
+    >
+      <xpath
+            expr="//input[@name='attachment']/ancestor::div[@class='form-group']"
+            position="after"
+        >
+          <div class="form-group">
+            <label
+                    class="col-md-3 col-sm-4 control-label"
+                    for="system_availability"
+                >System Availability</label>
+            <div class="col-md-7 col-sm-8">
+              <select
+                        type="select"
+                        class="form-control"
+                        name="system_availability"
+                        placeholder="System Availability"
+                    />
+            </div>
+          </div>
+      </xpath>
+    </template>
+</odoo>
