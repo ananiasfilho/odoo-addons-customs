@@ -1,26 +1,13 @@
 <odoo>
-    <template
-        id="helpdesk_system_availability_view"
-        inherit_id="helpdesk_mgmt.portal_my_tickets"
-        priority="40"
-    >
-        <!-- Adiciona o campo system_availability após o campo attachment -->
-        <xpath expr="//input[@name='attachment']/ancestor::div[hasclass('form-group')]" position="after">
-            <div class="form-group">
-                <label class="col-md-3 col-sm-4 control-label" for="system_availability">
-                    System Availability
-                </label>
-                <div class="col-md-7 col-sm-8">
-                    <select class="form-control" id="system_availability" name="system_availability">
-                        <option value="">Select an option</option>
-                        <t t-foreach="system_availabilitys" t-as="system_availability">
-                            <option t-att-value="system_availability.id">
-                                <t t-esc="system_availability.name" />
-                            </option>
-                        </t>
-                    </select>
+    <template id="helpdesk_system_availability_view" inherit_id="helpdesk_mgmt.portal_helpdesk_ticket_page" priority="40">
+        <!-- Tenta inserir o campo dentro do primeiro div para verificar se a view é herdada corretamente -->
+        <xpath expr="//div" position="inside">
+            <t t-if="ticket.system_availability_id">
+                <div class="form-group">
+                    <label class="control-label">System Availability:</label>
+                    <span><t t-esc="ticket.system_availability_id.name"/></span>
                 </div>
-            </div>
+            </t>
         </xpath>
     </template>
 </odoo>
