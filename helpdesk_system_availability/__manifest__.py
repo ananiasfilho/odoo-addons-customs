@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Helpdesk Ticket System Availabilit",
+    "name": "Helpdesk Ticket System Availability",
     "version": "16.0.1.1.0",
     "license": "AGPL-3",
     "summary": "Add a system availability to your tickets",
@@ -14,6 +14,8 @@
         "views/helpdesk_ticket_system_availability.xml",
         "views/helpdesk_ticket_team.xml",
         "views/helpdesk_ticket.xml",
+	"views/helpdesk_ticket_portal_form.xml",
+	"views/helpdesk_templates.xml",
     ],
     "demo": ["demo/helpdesk_system_availability_demo.xml"],
     "application": False,

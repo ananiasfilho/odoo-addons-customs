@@ -1,111 +1,115 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* helpdesk_type
+# 	* helpdesk_system_availability
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-10-31 15:37+0000\n"
-"Last-Translator: Adriano Prado <adrianojprado@gmail.com>\n"
-"Language-Team: none\n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2024-11-07 18:33+0000\n"
+"PO-Revision-Date: 2024-11-07 18:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17\n"
+"Plural-Forms: \n"
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__create_uid
+#. module: helpdesk_system_availability
+#: model_terms:ir.ui.view,arch_db:helpdesk_system_availability.view_helpdesk_ticket_kanban
+msgid "<b>Availability:</b>"
+msgstr "<b>Disponibilidade:</b>"
+
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__create_uid
 msgid "Created by"
-msgstr "Criado por"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__create_date
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__create_date
 msgid "Created on"
-msgstr "Criado em"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__display_name
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__display_name
 msgid "Display Name"
-msgstr "Nome Exibido"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model,name:helpdesk_type.model_helpdesk_ticket
+#. module: helpdesk_system_availability
+#: model:ir.model,name:helpdesk_system_availability.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
-msgstr "Chamado"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model,name:helpdesk_type.model_helpdesk_ticket_team
+#. module: helpdesk_system_availability
+#: model:ir.model,name:helpdesk_system_availability.model_helpdesk_ticket_system_availability
+msgid "Helpdesk Ticket System Availability"
+msgstr ""
+
+#. module: helpdesk_system_availability
+#: model:ir.model,name:helpdesk_system_availability.model_helpdesk_ticket_team
 msgid "Helpdesk Ticket Team"
-msgstr "Equipe do Chamado"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.actions.act_window,name:helpdesk_type.action_helpdesk_ticket_type
-#: model:ir.model,name:helpdesk_type.model_helpdesk_ticket_type
-msgid "Helpdesk Ticket Type"
-msgstr "Tipo do Chamado"
+#. module: helpdesk_system_availability
+#: model:ir.actions.act_window,name:helpdesk_system_availability.action_helpdesk_ticket_system_availability
+msgid "Helpdesk Ticket system_availability"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,help:helpdesk_type.field_helpdesk_ticket_type__team_ids
-msgid "Helpdesk teams allowed to use this type."
-msgstr "As equipes da central de ajuda podem usar esse tipo."
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,help:helpdesk_system_availability.field_helpdesk_ticket_system_availability__team_ids
+msgid "Helpdesk teams allowed to use this system availability."
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__id
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type____last_update
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability____last_update
 msgid "Last Modified on"
-msgstr "??ltima Modifica????o em"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__write_uid
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__write_uid
 msgid "Last Updated by"
-msgstr "??ltima Atualiza????o por"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__write_date
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__write_date
 msgid "Last Updated on"
-msgstr "??ltima Atualiza????o em"
+msgstr ""
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__name
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__name
 msgid "Name"
 msgstr "Nome"
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_type__team_ids
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket__system_availability_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_system_availability.helpdesk_ticket_view_search
+msgid "System Availability"
+msgstr "Disponibilidade do sistema"
+
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_system_availability__team_ids
 msgid "Teams"
-msgstr "Equipes"
+msgstr "Equipe"
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket_team__type_ids
-msgid "Ticket Type"
-msgstr "Tipo de Chamado"
-
-#. module: helpdesk_type
-#: model:ir.ui.menu,name:helpdesk_type.helpdesk_ticket_type
-msgid "Ticket Types"
-msgstr "Tipos de Chamado"
-
-#. module: helpdesk_type
-#: model:ir.model.fields,help:helpdesk_type.field_helpdesk_ticket_team__type_ids
-msgid "Ticket Types the team will use. This team's tickets will only be able to use those types."
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,field_description:helpdesk_system_availability.field_helpdesk_ticket_team__system_availability_ids
+#: model:ir.ui.menu,name:helpdesk_system_availability.helpdesk_ticket_system_availability
+msgid "Ticket System Availability"
 msgstr ""
-"Tipos de chamado que a equipe usar??. Os chamados dessa equipe s?? poder??o "
-"usar esses tipos."
 
-#. module: helpdesk_type
-#: model:ir.model.fields,field_description:helpdesk_type.field_helpdesk_ticket__type_id
-#: model_terms:ir.ui.view,arch_db:helpdesk_type.helpdesk_ticket_type_form
-msgid "Type"
-msgstr "Tipo"
+#. module: helpdesk_system_availability
+#: model:ir.model.fields,help:helpdesk_system_availability.field_helpdesk_ticket_team__system_availability_ids
+msgid ""
+"Ticket System Availability the team will use. This team's tickets will only "
+"be able to use those System Availability."
+msgstr ""
 
-#. module: helpdesk_type
-#: model_terms:ir.ui.view,arch_db:helpdesk_type.helpdesk_ticket_type_tree
-msgid "Types"
-msgstr "Tipos"
+#. module: helpdesk_system_availability
+#: model_terms:ir.ui.view,arch_db:helpdesk_system_availability.helpdesk_ticket_system_availability_form
+msgid "system_availability"
+msgstr ""
