@@ -3,12 +3,15 @@ from odoo.http import request
 from odoo.addons.helpdesk_mgmt.controllers.main import HelpdeskTicketController
 
 class HelpdeskTicketController(HelpdeskTicketController):
-    @http.route("/new/ticket", type="http", auth="user", website=True)
+    # Ajuste a rota para corresponder à URL correta do portal
+    @http.route("/ticket/new", type="http", auth="user", website=True)
     def portal_create_ticket(self, **kw):
+        # Obtém as opções de disponibilidade de sistema
         system_availabilitys = request.env['helpdesk.ticket.system_availability'].sudo().search([])
+
+        # Renderiza o formulário do portal com as opções
         return request.render("helpdesk_mgmt.portal_create_ticket", {
             'system_availabilitys': system_availabilitys,
-            # Adicione outros contextos conforme necessário
         })
 
     @http.route("/submitted/ticket", type="http", auth="user", website=True, csrf=True)

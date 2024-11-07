@@ -4,16 +4,16 @@
         inherit_id="helpdesk_mgmt.portal_create_ticket"
         priority="40"
     >
-        <xpath expr="//input[@name='attachment']/ancestor::div[@class='form-group']" position="after">
+        <xpath expr="//input[@name='attachment']/ancestor::div[hasclass('form-group')]" position="after">
             <div class="form-group">
                 <label class="col-md-3 col-sm-4 control-label" for="system_availability">
                     System Availability
                 </label>
                 <div class="col-md-7 col-sm-8">
                     <select class="form-control" id="system_availability" name="system_availability">
-                        <option value="" />
+                        <option value="">Select an option</option>
                         <t t-foreach="system_availabilitys" t-as="system_availability">
-                            <option t-attf-value="#{system_availability.id}">
+                            <option t-att-value="system_availability.id">
                                 <t t-esc="system_availability.name" />
                             </option>
                         </t>
