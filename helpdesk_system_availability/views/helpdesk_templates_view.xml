@@ -1,10 +1,10 @@
 <odoo>
     <template id="helpdesk_system_availability_view" inherit_id="helpdesk_mgmt.portal_helpdesk_ticket_page" priority="40">
-        <!-- Tenta inserir o campo dentro do primeiro div para verificar se a view é herdada corretamente -->
-        <xpath expr="//div" position="inside">
+        <!-- Posiciona o campo system_availability logo após o campo Category -->
+        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
             <t t-if="ticket.system_availability_id">
                 <div class="form-group">
-                    <label class="control-label">System Availability:</label>
+                    <label class="control-label"><b>System Availability: </b></label>
                     <span><t t-esc="ticket.system_availability_id.name"/></span>
                 </div>
             </t>
