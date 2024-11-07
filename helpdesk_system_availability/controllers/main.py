@@ -1,18 +1,42 @@
+import logging
 import odoo.http as http
 from odoo.http import request
 from odoo.addons.helpdesk_mgmt.controllers.main import HelpdeskTicketController
 
+_logger = logging.getLogger(__name__)
 class HelpdeskTicketController(HelpdeskTicketController):
-    # Ajuste a rota para corresponder à URL correta do portal
-    @http.route("/ticket/new", type="http", auth="user", website=True)
-    def portal_create_ticket(self, **kw):
-        # Obtém as opções de disponibilidade de sistema
+    @http.route("/new/ticket", type="http", auth="user", website=True)
+    def create_new_ticket(self, **kw):
+        session_info = http.request.env["ir.http"].session_info()
+        company = request.env.company
+        category_model = http.request.env["helpdesk.ticket.category"]
+        categories = category_model.with_company(company.id).search(
+            [("active", "=", True)]
+        )
+        email = http.request.env.user.email
+        name = http.request.env.user.name
+        company = request.env.company
+        
         system_availabilitys = request.env['helpdesk.ticket.system_availability'].sudo().search([])
 
-        # Renderiza o formulário do portal com as opções
-        return request.render("helpdesk_mgmt.portal_create_ticket", {
-            'system_availabilitys': system_availabilitys,
-        })
+        
+        return http.request.render(
+            "helpdesk_mgmt.portal_create_ticket",
+            {
+                "categories": categories,
+                "teams": self._get_teams(),
+                "email": email,
+                "name": name,
+                "ticket_team_id_required": (
+                    company.helpdesk_mgmt_portal_team_id_required
+                ),
+                "ticket_category_id_required": (
+                    company.helpdesk_mgmt_portal_category_id_required
+                ),
+                "max_upload_size": session_info["max_file_upload_size"],
+                "system_availabilitys": system_availabilitys
+            },
+        )
 
     @http.route("/submitted/ticket", type="http", auth="user", website=True, csrf=True)
     def submit_ticket(self, **kw):

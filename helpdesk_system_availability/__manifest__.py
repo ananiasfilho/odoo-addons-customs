@@ -16,6 +16,7 @@
         "views/helpdesk_ticket.xml",
 	"views/helpdesk_ticket_portal_form.xml",
 	"views/helpdesk_templates.xml",
+	"views/helpdesk_templates_view.xml",
     ],
     "demo": ["demo/helpdesk_system_availability_demo.xml"],
     "application": False,

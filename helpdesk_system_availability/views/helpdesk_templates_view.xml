@@ -1,7 +1,7 @@
 <odoo>
     <template
-        id="helpdesk_system_availability"
-        inherit_id="helpdesk_mgmt.portal_create_ticket"
+        id="helpdesk_system_availability_view"
+        inherit_id="helpdesk_mgmt.portal_my_tickets"
         priority="40"
     >
         <!-- Adiciona o campo system_availability após o campo attachment -->
