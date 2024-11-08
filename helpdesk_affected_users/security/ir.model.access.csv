@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_helpdesk_ticket_affected_users,access_helpdesk_ticket_affected_users,model_helpdesk_ticket,,1,1,0,0
+access_helpdesk_ticket_portal,access_helpdesk_ticket_portal,model_helpdesk_ticket,base.group_portal,1,1,1,1

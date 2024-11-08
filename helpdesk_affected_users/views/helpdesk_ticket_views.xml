@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_affected_users" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.affected.users</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                    <field name="affected_users"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
