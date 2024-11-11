@@ -1,0 +1,37 @@
+<!-- Copyright (C) 2024 KMEE
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record model="ir.ui.view" id="helpdesk_ticket_request_complexity_form">
+        <field name="name">helpdesk.ticket.request_complexity.form</field>
+        <field name="model">helpdesk.ticket.request_complexity</field>
+        <field name="arch" type="xml">
+            <form string="request_complexity">
+                <group>
+                    <field name="name" />
+                    <field name="team_ids" />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="helpdesk_ticket_request_complexity_tree">
+        <field name="name">helpdesk.ticket.request_complexity.tree</field>
+        <field name="model">helpdesk.ticket.request_complexity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_helpdesk_ticket_request_complexity" model="ir.actions.act_window">
+        <field name="name">Helpdesk Ticket request_complexity</field>
+        <field name="res_model">helpdesk.ticket.request_complexity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Ticket Request Complexity"
+        id="helpdesk_ticket_request_complexity"
+        parent="helpdesk_mgmt.helpdesk_ticket_config_main_menu"
+        action="action_helpdesk_ticket_request_complexity"
+        sequence="5"
+    />
+</odoo>

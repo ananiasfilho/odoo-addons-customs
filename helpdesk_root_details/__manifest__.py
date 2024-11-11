@@ -1,13 +1,13 @@
 {
-    'name': 'Helpdesk Affected Users',
+    'name': 'Helpdesk Root Details',
     'version': '16.0.1.0.0',
     'depends': ['helpdesk_mgmt'],
-    'author': 'KMEE',
+    'author': 'Ananias Filho',
     'license': 'AGPL-3',
     'category': 'Helpdesk',
-    'description': 'Adiciona o campo Affected Users ao módulo de Helpdesk para registrar o número de usuários afetados.',
+    'description': 'Adiciona uma aba Root Details para descrições de causa raiz no helpdesk.',
     'data': [
-        'security/ir.model.access.csv',
+	'security/ir.model.access.csv',
         'views/helpdesk_ticket_views.xml',
     ],
     'installable': True,

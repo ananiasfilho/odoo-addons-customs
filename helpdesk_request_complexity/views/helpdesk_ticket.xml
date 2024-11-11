@@ -1,17 +1,17 @@
 <!-- Copyright (C) 2024 KMEE
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
-    <record id="view_helpdesk_ticket_form_customer_priority" model="ir.ui.view">
-        <field name="name">Add Customer Priority on Helpdesk</field>
+    <record id="view_helpdesk_ticket_form_request_complexity" model="ir.ui.view">
+        <field name="name">Add Request Complexity on Helpdesk</field>
         <field name="model">helpdesk.ticket</field>
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form" />
         <field name="arch" type="xml">
             <field name="team_id" position="before">
-                <field name="customer_priority_id" />
+                <field name="request_complexity_id" />
             </field>
             <xpath expr="//field[@name='team_id']" position="attributes">
                 <attribute name="domain">
-                    [('customer_priority_ids', 'in', customer_priority_id)]
+                    [('request_complexity_ids', 'in', request_complexity_id)]
                 </attribute>
             </xpath>
         </field>
@@ -22,36 +22,36 @@
         <field name="inherit_id" ref="helpdesk_mgmt.helpdesk_ticket_view_search" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='stage_id']" position="after">
-                <field name="customer_priority_id" />
+                <field name="request_complexity_id" />
             </xpath>
             <xpath expr="//filter[@name='group_stage']" position="after">
                 <filter
-                    string="Customer Priority"
-                    name="group_customer_priority"
+                    string="Request Complexity"
+                    name="group_request_complexity"
                     domain="[]"
-                    context="{'group_by':'customer_priority_id'}"
+                    context="{'group_by':'request_complexity_id'}"
                 />
             </xpath>
         </field>
     </record>
     <record id="ticket_view_tree" model="ir.ui.view">
-        <field name="name">helpdesk.ticket.view.tree (in helpdesk_customer_priority)</field>
+        <field name="name">helpdesk.ticket.view.tree (in helpdesk_request_complexity)</field>
         <field name="model">helpdesk.ticket</field>
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_tree" />
         <field name="arch" type="xml">
             <field name="tag_ids" position="before">
-                <field name="customer_priority_id" optional="show" />
+                <field name="request_complexity_id" optional="show" />
             </field>
         </field>
     </record>
     <record id="view_helpdesk_ticket_kanban" model="ir.ui.view">
-        <field name="name">helpdesk.ticket.kanban (in helpdesk_customer_priority)</field>
+        <field name="name">helpdesk.ticket.kanban (in helpdesk_request_complexity)</field>
         <field name="model">helpdesk.ticket</field>
         <field name="inherit_id" ref="helpdesk_mgmt.view_helpdesk_ticket_kanban" />
         <field name="arch" type="xml">
             <xpath expr="//templates//field[@name='number']" position="after">
                 <small class="o_kanban_record_subtitle">
-                    <i><b>Customer priority:</b> <field name="customer_priority_id" /></i>
+                    <i><b>Complexity:</b> <field name="request_complexity_id" /></i>
                 </small>
             </xpath>
         </field>

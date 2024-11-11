@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_solution_details" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.solution.details</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Solution Details (Treatment)">
+                    <field name="solution_details" widget="html"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -3,7 +3,7 @@ import odoo.http as http
 from odoo.http import request
 from odoo.addons.helpdesk_mgmt.controllers.main import HelpdeskTicketController
 
-_logger = logging.getLogger(__name__)
+#_logger = logging.getLogger(__name__)
 class HelpdeskTicketController(HelpdeskTicketController):
     @http.route("/new/ticket", type="http", auth="user", website=True)
     def create_new_ticket(self, **kw):

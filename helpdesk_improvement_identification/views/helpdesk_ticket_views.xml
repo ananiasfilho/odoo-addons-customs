@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_improvement_identification" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.improvement.identification</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Improvement Identification">
+                    <field name="improvement_identification" widget="html"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

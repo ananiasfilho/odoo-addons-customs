@@ -9,5 +9,30 @@
                 </div>
             </t>
         </xpath>
+                <!-- Posiciona o campo system_availability logo após o campo Category -->
+        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+            <t t-if="ticket.type_id">
+                <div class="form-group">
+                    <label class="control-label"><b>Type: </b></label>
+                    <span><t t-esc="ticket.type_id.name"/></span>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+            <t t-if="ticket.project_id">
+                <div class="form-group">
+                    <label class="control-label"><b>Project: </b></label>
+                    <span><t t-esc="ticket.project_id.name"/></span>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+            <t t-if="ticket.affected_users">
+                <div class="form-group">
+                    <label class="control-label"><b>Affected Users: </b></label>
+                    <span><t t-esc="ticket.affected_users"/></span>
+                </div>
+            </t>
+        </xpath>
     </template>
 </odoo>

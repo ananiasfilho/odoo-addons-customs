@@ -1,0 +1,70 @@
+<odoo>
+    <template id="helpdesk_customer_priority_view" inherit_id="helpdesk_mgmt.portal_create_ticket" priority="40">
+        <xpath expr="//input[@name='attachment']/ancestor::div[@class='form-group']" position="after">
+            <div class="form-group">
+                <label class="col-md-3 col-sm-4 control-label" for="customer_priority">
+                    Customer Priority
+                </label>
+                <div class="col-md-7 col-sm-8">
+                    <select class="form-control" id="customer_priority" name="customer_priority">
+                        <option value="">Select priority</option>
+                        <t t-foreach="customer_priorities" t-as="priority">
+                            <option t-att-value="priority.id">
+                                <t t-esc="priority.name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//input[@name='attachment']/ancestor::div[@class='form-group']" position="after">
+            <div class="form-group">
+                <label class="col-md-3 col-sm-4 control-label" for="product">
+                    Product
+                </label>
+                <div class="col-md-7 col-sm-8">
+                    <select class="form-control" id="product" name="product">
+                        <option value="">Select product</option>
+                        <t t-foreach="products" t-as="product">
+                            <option t-att-value="product.id">
+                                <t t-esc="product.display_name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </xpath>
+
+        <!-- Campo Affected Users como Número Inteiro -->
+        <xpath expr="//input[@name='attachment']/ancestor::div[@class='form-group']" position="after">
+            <div class="form-group">
+                <label class="col-md-3 col-sm-4 control-label" for="affected_users">
+                    Number of affected users
+                </label>
+                <div class="col-md-7 col-sm-8">
+                    <input type="number" class="form-control" id="affected_users" name="affected_users" placeholder="Enter affected users" min="0" step="1" />
+                </div>
+            </div>
+        </xpath>
+
+                <!-- Campo Projects Seguidos -->
+        <xpath expr="//input[@name='attachment']/ancestor::div[@class='form-group']" position="after">
+            <div class="form-group">
+                <label class="col-md-3 col-sm-4 control-label" for="project_id">
+                    Project
+                </label>
+                <div class="col-md-7 col-sm-8">
+                    <select class="form-control" id="project_id" name="project_id">
+                        <option value="">Select a project</option>
+                        <t t-foreach="followed_projects" t-as="project">
+                            <option t-att-value="project.id">
+                                <t t-esc="project.name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

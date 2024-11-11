@@ -1,13 +1,13 @@
 {
-    'name': 'Helpdesk Affected Users',
+    'name': 'Helpdesk Improvement Identification',
     'version': '16.0.1.0.0',
     'depends': ['helpdesk_mgmt'],
     'author': 'KMEE',
     'license': 'AGPL-3',
     'category': 'Helpdesk',
-    'description': 'Adiciona o campo Affected Users ao módulo de Helpdesk para registrar o número de usuários afetados.',
+    'description': 'Adiciona uma aba Improvement Identification para descrições de melhorias.',
     'data': [
-        'security/ir.model.access.csv',
+	'security/ir.model.access.csv',
         'views/helpdesk_ticket_views.xml',
     ],
     'installable': True,
