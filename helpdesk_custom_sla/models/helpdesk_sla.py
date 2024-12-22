@@ -4,7 +4,17 @@ class HelpdeskSLA(models.Model):
     _name = "helpdesk.sla"
     _description = "Helpdesk SLA"
 
-    name = fields.Char(string="SLA Name", required=True)
-    response_time = fields.Float(string="Response Time (Hours)", required=True, help="Maximum time to respond to a ticket.")
-    resolution_time = fields.Float(string="Resolution Time (Hours)", required=True, help="Maximum time to resolve a ticket.")
-    active = fields.Boolean(string="Active", default=True)
+    name = fields.Char(string="Name", required=True)
+    response_time = fields.Float(string="Response Time (hours)")
+    resolution_time = fields.Float(string="Resolution Time (hours)")
+    attention_threshold = fields.Float(
+        string="Attention Threshold (%)",
+        default=50,
+        help="Percentage of SLA time when attention status is triggered."
+    )
+    expiring_threshold = fields.Float(
+        string="Expiring Threshold (%)",
+        default=20,
+        help="Percentage of SLA time when expiring status is triggered."
+    )
+    active = fields.Boolean(default=True)
