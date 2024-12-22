@@ -1,7 +1,7 @@
 <odoo>
     <template id="helpdesk_system_availability_view" inherit_id="helpdesk_mgmt.portal_helpdesk_ticket_page" priority="40">
-        <!-- Posiciona o campo system_availability logo após o campo Category -->
-        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+        <!-- Posiciona o campo system_availability logo após o campo Date -->
+        <xpath expr="//strong[contains(text(), 'Date:')]/parent::div" position="after">
             <t t-if="ticket.system_availability_id">
                 <div class="form-group">
                     <label class="control-label"><b>System Availability: </b></label>
@@ -9,8 +9,8 @@
                 </div>
             </t>
         </xpath>
-                <!-- Posiciona o campo system_availability logo após o campo Category -->
-        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+                <!-- Posiciona o campo system_availability logo após o campo Date -->
+        <xpath expr="//strong[contains(text(), 'Date:')]/parent::div" position="after">
             <t t-if="ticket.type_id">
                 <div class="form-group">
                     <label class="control-label"><b>Type: </b></label>
@@ -18,7 +18,7 @@
                 </div>
             </t>
         </xpath>
-        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+        <xpath expr="//strong[contains(text(), 'Date:')]/parent::div" position="after">
             <t t-if="ticket.project_id">
                 <div class="form-group">
                     <label class="control-label"><b>Project: </b></label>
@@ -26,7 +26,7 @@
                 </div>
             </t>
         </xpath>
-        <xpath expr="//strong[contains(text(), 'Category:')]/parent::div" position="after">
+        <xpath expr="//strong[contains(text(), 'Date:')]/parent::div" position="after">
             <t t-if="ticket.affected_users">
                 <div class="form-group">
                     <label class="control-label"><b>Affected Users: </b></label>
