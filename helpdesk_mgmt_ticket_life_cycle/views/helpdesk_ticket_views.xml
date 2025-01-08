@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_life_cicle" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.stage.duration</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Stage Durations" name="stage_durations">
+                    <field name="stage_duration_ids" context="{'default_ticket_id': active_id}" nolabel="1">
+                        <tree>
+                            <field name="stage_id"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="duration_display" string="Duration"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
