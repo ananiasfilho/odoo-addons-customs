@@ -23,4 +23,4 @@ msgstr "Usuários Afetados"
 #. module: helpdesk_affected_users
 #: model:ir.model,name:helpdesk_affected_users.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
-msgstr ""
+msgstr "Chamado"

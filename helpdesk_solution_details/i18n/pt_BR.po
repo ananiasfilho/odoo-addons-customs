@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_solution_details
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-08 21:23+0000\n"
+"PO-Revision-Date: 2025-01-08 18:25-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: helpdesk_solution_details
+#: model:ir.model,name:helpdesk_solution_details.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Chamado"
+
+#. module: helpdesk_solution_details
+#: model:ir.model.fields,field_description:helpdesk_solution_details.field_helpdesk_ticket__solution_details
+#: model_terms:ir.ui.view,arch_db:helpdesk_solution_details.view_helpdesk_ticket_form_inherit_solution_details
+msgid "Solution Details (Treatment)"
+msgstr "Detalhes da solução (tratamento)"

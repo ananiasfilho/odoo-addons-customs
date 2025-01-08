@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_improvement_identification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-08 20:45+0000\n"
+"PO-Revision-Date: 2025-01-08 17:47-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: helpdesk_improvement_identification
+#: model:ir.model,name:helpdesk_improvement_identification.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Chamado"
+
+#. module: helpdesk_improvement_identification
+#: model:ir.model.fields,field_description:helpdesk_improvement_identification.field_helpdesk_ticket__improvement_identification
+#: model_terms:ir.ui.view,arch_db:helpdesk_improvement_identification.view_helpdesk_ticket_form_inherit_improvement_identification
+msgid "Improvement Identification"
+msgstr "Identificação de Melhorias"

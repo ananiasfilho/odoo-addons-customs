@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_rework
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-08 20:50+0000\n"
+"PO-Revision-Date: 2025-01-08 17:54-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: helpdesk_rework
+#: model_terms:ir.ui.view,arch_db:helpdesk_rework.view_helpdesk_ticket_form_inherit_rework
+msgid "Atividades de Rework"
+msgstr "Atividades do retrabalho"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__create_date
+msgid "Creation Date"
+msgstr "Data de criação"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__display_name
+msgid "Display Name"
+msgstr "Nome de exibição"
+
+#. module: helpdesk_rework
+#: model:ir.model,name:helpdesk_rework.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Chamado"
+
+#. module: helpdesk_rework
+#: model:ir.model,name:helpdesk_rework.model_helpdesk_ticket_rework
+msgid "Helpdesk Ticket Rework"
+msgstr "Retrabalho no Chamado"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__id
+msgid "ID"
+msgstr "ID"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__write_date
+msgid "Last Modified Date"
+msgstr "Data da última modificação"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: helpdesk_rework
+#: model_terms:ir.ui.view,arch_db:helpdesk_rework.view_helpdesk_ticket_form_inherit_rework
+msgid "Nova Atividade de Rework"
+msgstr "Nova atividade de retrabalho"
+
+#. module: helpdesk_rework
+#: model_terms:ir.ui.view,arch_db:helpdesk_rework.view_helpdesk_ticket_form_inherit_rework
+msgid "Rework"
+msgstr "Retrabalho"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__description
+msgid "Rework Description"
+msgstr "Descrição do retrabalho"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket__rework_ids
+msgid "Reworks"
+msgstr "Retrabalhos"
+
+#. module: helpdesk_rework
+#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__ticket_id
+msgid "Ticket"
+msgstr "Chamado"
