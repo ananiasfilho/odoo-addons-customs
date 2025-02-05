@@ -83,11 +83,6 @@ msgid "Rework Description"
 msgstr "Descrição do retrabalho"
 
 #. module: helpdesk_rework
-#: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket__rework_ids
-msgid "Reworks"
-msgstr "Retrabalhos"
-
-#. module: helpdesk_rework
 #: model:ir.model.fields,field_description:helpdesk_rework.field_helpdesk_ticket_rework__ticket_id
 msgid "Ticket"
 msgstr "Chamado"
