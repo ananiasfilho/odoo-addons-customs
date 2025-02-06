@@ -1,31 +1,30 @@
 <odoo>
-    <record id="view_helpdesk_ticket_form_inherit_rework" model="ir.ui.view">
-        <field name="name">helpdesk.ticket.form.rework</field>
+
+    <record id="helpdesk_ticket_rework_action" model="ir.actions.act_window">
+        <field name="name">Ticket Rework Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">helpdesk.ticket.rework</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+        <menuitem
+        id="helpdesk_ticket_rework_menu"
+        name="Ticket Rework Types"
+        parent="helpdesk_mgmt.helpdesk_ticket_config_main_menu"
+        action="helpdesk_ticket_rework_action"
+        sequence="45"
+    />
+
+    <record id="timesheet_helpdesk_rework_view_form" model="ir.ui.view">
+        <field name="name">helpdesk.timesheet.rework.form</field>
         <field name="model">helpdesk.ticket</field>
-        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
+        <field name="inherit_id" ref="helpdesk_mgmt_timesheet.timesheet_helpdesk_ticket_view_form"/>
         <field name="arch" type="xml">
-            <notebook position="inside">
-                <page string="Rework">
-                    <field name="rework_ids">
-                        <tree string="Atividades de Rework">
-                            <field name="description"/>
-                            <field name="create_date"/>
-                            <field name="create_uid"/>
-                            <field name="write_date"/> <!-- Adicionado para exibir a última modificação -->
-                        </tree>
-                        <form string="Nova Atividade de Rework">
-                            <sheet>
-                                <field name="description" widget="html" options="{'height': 300}"/>
-                                <group>
-                                    <field name="create_date" readonly="1"/>
-                                    <field name="create_uid" readonly="1"/>
-                                    <field name="write_date" readonly="1"/> <!-- Campo adicionado -->
-                                </group>
-                            </sheet>
-                        </form>
-                    </field>
-                </page>
-            </notebook>
+            <xpath expr="//field[@name='timesheet_ids']//field[@name='name']" position="after">
+                <field name="is_rework"/>
+                <field name="rework_id" attrs="{'invisible': [('is_rework', '=', False)]}"/>
+            </xpath>
         </field>
     </record>
+
 </odoo>

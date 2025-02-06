@@ -5,35 +5,33 @@ class HelpdeskTicketRework(models.Model):
     _name = 'helpdesk.ticket.rework'
     _description = 'Helpdesk Ticket Rework'
 
+    name = fields.Char(string='Rework type', required=True)
     description = fields.Html(string='Rework Description', required=True)
-    ticket_id = fields.Many2one('helpdesk.ticket', string='Ticket', ondelete='cascade')
-    create_date = fields.Datetime(string='Creation Date', readonly=True, default=fields.Datetime.now)
-    create_uid = fields.Many2one('res.users', string='Created by', readonly=True, default=lambda self: self.env.user)
+    create_date = fields.Datetime(
+        string='Creation Date', 
+        readonly=True,
+        default=fields.Datetime.now
+    )
+    create_uid = fields.Many2one(
+        'res.users',
+        string='Created by',
+        readonly=True,
+        default=lambda self: self.env.user
+    )
     write_date = fields.Datetime(string='Last Modified Date', readonly=True)
 
-    @api.model
-    def create(self, vals):
-        # Define a data de criação e o usuário ao criar o registro
-        vals['create_date'] = fields.Datetime.now()
-        vals['create_uid'] = self.env.user.id
-        return super(HelpdeskTicketRework, self).create(vals)
 
-    def write(self, vals):
-        # Atualiza write_date sempre que description é modificada
-        if 'description' in vals:
-            vals['write_date'] = fields.Datetime.now()
-        return super(HelpdeskTicketRework, self).write(vals)
+class AcccountAnalyticLine(models.Model):
+    _inherit = 'account.analytic.line'
 
-# Funcionq - porem, ao salvar o ticket inteiro, atualiza o write_date do rewirte edita.
-#    @api.depends('description')
-#    def _compute_audit_fields(self):
-#        for record in self:
-#            record.write_date = fields.Datetime.now()
-#
-#    write_date = fields.Datetime(string='Last Modified Date', compute="_compute_audit_fields", store=True)
+    is_rework = fields.Boolean(string='Is rework?')
+    rework_id = fields.Many2one(
+        comodel_name='helpdesk.ticket.rework',
+        string='Rework type'
+    )
 
-
-class HelpdeskTicket(models.Model):
-    _inherit = 'helpdesk.ticket'
-
-    rework_ids = fields.One2many('helpdesk.ticket.rework', 'ticket_id', string='Reworks')
+    @api.onchange('is_rework')
+    def _onchange_is_rework(self):
+        for record in self:
+            if not record.is_rework:
+                record.rework_id = False
